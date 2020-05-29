@@ -36,7 +36,7 @@
               "src/mstile-310x150.png",
               "src/mstile-310x310.png",
               "src/safari-pinned-tab.svg",
-              "src/site.webmanifest",
+              "src/manifest.json",
               "src/assets"
             ],
             "styles": [
@@ -68,7 +68,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "src/ngsw-config.json"
             }
           }
         },
@@ -102,7 +104,8 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ]
           }
         },

@@ -1,0 +1,82 @@
+{
+  "configVersion": 1,
+  "timestamp": 1590786148274,
+  "index": "/focus/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/focus/es2015-polyfills.1bc1ef7444dc072ed707.js",
+        "/focus/favicon.ico",
+        "/focus/index.html",
+        "/focus/main.415d9ecb7e34c7611eb1.js",
+        "/focus/polyfills.b2c31ebcc6c4a1fe2cb4.js",
+        "/focus/runtime.a42b10975ddde4a3b263.js",
+        "/focus/styles.48b5c08102dc5f7b64ef.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/focus/android-chrome-192x192.png",
+        "/focus/android-chrome-512x512.png",
+        "/focus/apple-touch-icon.png",
+        "/focus/assets/img/tomato.svg",
+        "/focus/favicon-16x16.png",
+        "/focus/favicon-32x32.png",
+        "/focus/mstile-144x144.png",
+        "/focus/mstile-150x150.png",
+        "/focus/mstile-310x150.png",
+        "/focus/mstile-310x310.png",
+        "/focus/mstile-70x70.png",
+        "/focus/safari-pinned-tab.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/focus/android-chrome-192x192.png": "f50c01cbc1d68adb86318b1b758d45aa383d92d2",
+    "/focus/android-chrome-512x512.png": "f7799f5ee4217dde1153af9b46c47dcc5f26d124",
+    "/focus/apple-touch-icon.png": "fdf3f248021363d6613c7ac27625f58d25ab8089",
+    "/focus/assets/img/tomato.svg": "7e2b89ec86218979831167f3c98ca713a5f33413",
+    "/focus/es2015-polyfills.1bc1ef7444dc072ed707.js": "207ad12781a7aba0fba8c5e505a18d35dd06a410",
+    "/focus/favicon-16x16.png": "ec755573733bbf6b462cc7c4a07af995404ba48d",
+    "/focus/favicon-32x32.png": "b9370a8eab471278fe48cbe280b3bbc43440bff1",
+    "/focus/favicon.ico": "31b5dd2bca2d2de2825d720e17a10d32b2e974c6",
+    "/focus/index.html": "d40cb3283d38f75d1925faeaa961c97f57a05ffe",
+    "/focus/main.415d9ecb7e34c7611eb1.js": "e9f9899b02b63e35381ddf97e3abf8040ca2fffe",
+    "/focus/mstile-144x144.png": "b07fcbf312b441e5d2679580f40c9d6b9759c562",
+    "/focus/mstile-150x150.png": "a8b4a6c1a8678f726908e7e6bffc467219e3fd7c",
+    "/focus/mstile-310x150.png": "37c48d0cda93f0c6bf134127451f1a204ab3488e",
+    "/focus/mstile-310x310.png": "1798dcf524866e19e0290351545fee293135ea89",
+    "/focus/mstile-70x70.png": "736a701a7f8895b0ba1692df11ad9d7dcab43fdc",
+    "/focus/polyfills.b2c31ebcc6c4a1fe2cb4.js": "31dba5e00bce089fa3ecb1df8e1f2c22b84d32cc",
+    "/focus/runtime.a42b10975ddde4a3b263.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/focus/safari-pinned-tab.svg": "7238632d7ddf9e45b76acfff477c1284a71205fd",
+    "/focus/styles.48b5c08102dc5f7b64ef.css": "be176bff20ee27bcd6381f5e76ef525fc96b7714"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
