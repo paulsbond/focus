@@ -26,7 +26,7 @@
               "src/assets",
               "src/browser-config.xml",
               "src/favicon.ico",
-              "src/manifest.json"
+              "src/site.webmanifest"
             ],
             "styles": [
               "src/styles.scss"
@@ -94,7 +94,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json"
+              "src/site.webmanifest"
             ]
           }
         },
