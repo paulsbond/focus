@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  completedSessions = [];
+  completed = [];
   currentTask = "";
   running = false;
   remainingSeconds = 1500;
@@ -21,11 +21,11 @@ export class AppComponent implements OnInit {
       this.storage_set("remainingSeconds");
       if (this.remainingSeconds === 0) {
         clearInterval(interval);
-        this.completedSessions.push({
+        this.completed.push({
           task: this.currentTask,
           endTime: Date.now()
         });
-        this.storage_set("completedSessions");
+        this.storage_set("completed");
         this.running = false;
         this.remainingSeconds = 1500;
         this.currentTask = "";
@@ -35,25 +35,33 @@ export class AppComponent implements OnInit {
     }, 1000);
   }
 
+  clear() {
+    this.completed = [];
+    this.storage_del("completed");
+  }
+
   ngOnInit() {
-    this.storage_get("completedSessions");
+    this.storage_get("completed");
     this.storage_get("currentTask");
     this.storage_get("remainingSeconds");
     this.start();
   }
 
   storage_set(key: string): void {
-    localStorage.setItem(key, JSON.stringify(this[key]));
+    const storageKey = "focus." + key;
+    localStorage.setItem(storageKey, JSON.stringify(this[key]));
   }
 
   storage_get(key: string): void {
-    const value = localStorage.getItem(key);
+    const storageKey = "focus." + key;
+    const value = localStorage.getItem(storageKey);
     if (value !== null) {
       this[key] = JSON.parse(value);
     }
   }
 
   storage_del(key: string): void {
-    localStorage.removeItem(key);
+    const storageKey = "focus." + key;
+    localStorage.removeItem(storageKey);
   }
 }

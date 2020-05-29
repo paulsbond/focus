@@ -1,25 +1,32 @@
 <h1>Focus</h1>
 
-<ng-container *ngIf="completedSessions.length > 0">
-  <h2>Completed Sessions</h2>
+<p class="time">{{ remainingSeconds * 1000 | date:'mm:ss' }}</p>
+
+<p>For the next 25 minutes, I will focus on:</p>
+<input [(ngModel)]="currentTask" placeholder="Task" [disabled]="running">
+<button class="round" (click)="start()" [disabled]="running">Start</button>
+
+<ng-container *ngIf="completed.length > 0">
+  <h2>Completed</h2>
   <table>
     <thead>
       <tr>
+        <th>#</th>
         <th>Task</th>
         <th>End Time</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let session of completedSessions">
-        <td>{{session.task}}</td>
-        <td>{{session.endTime | date : 'shortTime' }}</td>
+      <tr *ngFor="let session of completed; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ session.task }}</td>
+        <td>{{ session.endTime | date : 'HH:mm' }}</td>
       </tr>
     </tbody>
   </table>
+  <button (click)="clear()">Clear</button>
 </ng-container>
 
-<h2>Current Session</h2>
-<p>For the next 25 minutes, I will focus on:</p>
-<input [(ngModel)]="currentTask" placeholder="Task" [disabled]="running">
-<p>Remaining: {{ remainingSeconds }}</p>
-<button (click)="start()" [disabled]="running">Start</button>
+<footer>
+  <a href="https://paulsbond.co.uk">https://paulsbond.co.uk</a>
+</footer>
