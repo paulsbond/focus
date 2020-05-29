@@ -1,0 +1,80 @@
+{
+  "configVersion": 1,
+  "timestamp": 1590795664869,
+  "index": "/focus/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/focus/favicon.ico",
+        "/focus/index.html",
+        "/focus/main-es2015.92d0155e1813f56503f1.js",
+        "/focus/main-es5.92d0155e1813f56503f1.js",
+        "/focus/manifest.webmanifest",
+        "/focus/polyfills-es2015.690002c25ea8557bb4b0.js",
+        "/focus/polyfills-es5.9e286f6d9247438cbb02.js",
+        "/focus/runtime-es2015.1eba213af0b233498d9d.js",
+        "/focus/runtime-es5.1eba213af0b233498d9d.js",
+        "/focus/styles.09e2c710755c8867a460.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/focus/assets/icons/icon-128x128.png",
+        "/focus/assets/icons/icon-144x144.png",
+        "/focus/assets/icons/icon-152x152.png",
+        "/focus/assets/icons/icon-192x192.png",
+        "/focus/assets/icons/icon-384x384.png",
+        "/focus/assets/icons/icon-512x512.png",
+        "/focus/assets/icons/icon-72x72.png",
+        "/focus/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/focus/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/focus/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/focus/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/focus/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/focus/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/focus/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/focus/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/focus/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/focus/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/focus/index.html": "c5ef9c10512b18368ee6035d78a19009fef3cded",
+    "/focus/main-es2015.92d0155e1813f56503f1.js": "6b726ca5ed833c3f6f761b1b35dc531c64318816",
+    "/focus/main-es5.92d0155e1813f56503f1.js": "9a012a54691e5da57585e44d6ee86515df5759eb",
+    "/focus/manifest.webmanifest": "223dc078fe59f59ad525285fd27725876f86ee32",
+    "/focus/polyfills-es2015.690002c25ea8557bb4b0.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "/focus/polyfills-es5.9e286f6d9247438cbb02.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
+    "/focus/runtime-es2015.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/focus/runtime-es5.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/focus/styles.09e2c710755c8867a460.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
