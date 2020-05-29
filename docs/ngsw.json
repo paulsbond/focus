@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1590788162978,
+  "timestamp": 1590789013249,
   "index": "/focus/index.html",
   "assetGroups": [
     {
@@ -55,7 +55,7 @@
     "/focus/assets/icons/whitebg-180x180.png": "fdf3f248021363d6613c7ac27625f58d25ab8089",
     "/focus/es2015-polyfills.1bc1ef7444dc072ed707.js": "207ad12781a7aba0fba8c5e505a18d35dd06a410",
     "/focus/favicon.ico": "31b5dd2bca2d2de2825d720e17a10d32b2e974c6",
-    "/focus/index.html": "7a41743410eb4befc11af115d13a6f48304bc60f",
+    "/focus/index.html": "5a541d7c5906cab1b7614721e0c8a52f68d61dd2",
     "/focus/main.22d2016a98b8b4422734.js": "efa4946b491da174a20a217636f385fae1e4dab7",
     "/focus/polyfills.b2c31ebcc6c4a1fe2cb4.js": "31dba5e00bce089fa3ecb1df8e1f2c22b84d32cc",
     "/focus/runtime.a42b10975ddde4a3b263.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
