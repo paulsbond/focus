@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
     this.running = true;
     this.interval = setInterval(() => {
       this.updateRemainingSeconds();
-      if (this.remainingSeconds === 0) {
+      if (this.remainingSeconds <= 0) {
         this.completed.push({
           task: this.task,
           endTime: Date.now()
@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
     }
     this.startTime = null;
     this.startSeconds = 1500;
-    this.remainingSeconds = 1500;
+    this.remainingSeconds = this.startSeconds;
     this.storage_del("startTime");
     this.storage_del("startSeconds");
   }
