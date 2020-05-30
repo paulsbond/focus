@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1590796850784,
+  "timestamp": 1590797510922,
   "index": "/focus/index.html",
   "assetGroups": [
     {
@@ -26,33 +26,23 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/focus/assets/icons/icon-128x128.png",
-        "/focus/assets/icons/icon-144x144.png",
-        "/focus/assets/icons/icon-152x152.png",
         "/focus/assets/icons/icon-192x192.png",
-        "/focus/assets/icons/icon-384x384.png",
         "/focus/assets/icons/icon-512x512.png",
-        "/focus/assets/icons/icon-72x72.png",
-        "/focus/assets/icons/icon-96x96.png"
+        "/focus/assets/icons/icon.svg"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/focus/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/focus/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/focus/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/focus/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/focus/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/focus/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/focus/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/focus/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/focus/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/focus/index.html": "da005ae1426c885c68701fa5f80f2667dca9fd05",
+    "/focus/assets/icons/icon-192x192.png": "f50c01cbc1d68adb86318b1b758d45aa383d92d2",
+    "/focus/assets/icons/icon-512x512.png": "f7799f5ee4217dde1153af9b46c47dcc5f26d124",
+    "/focus/assets/icons/icon.svg": "7e2b89ec86218979831167f3c98ca713a5f33413",
+    "/focus/favicon.ico": "31b5dd2bca2d2de2825d720e17a10d32b2e974c6",
+    "/focus/index.html": "59e3ad7342ac5ccaf1fffad77f11fe8533092bc5",
     "/focus/main-es2015.6c08405fe2149866faeb.js": "193a636ebded6d92d30eeb333c3f615b7e738cb0",
     "/focus/main-es5.6c08405fe2149866faeb.js": "ad0637ce1ed28826b148c8f637765291499e3938",
-    "/focus/manifest.webmanifest": "223dc078fe59f59ad525285fd27725876f86ee32",
+    "/focus/manifest.webmanifest": "e42c34edae4104a0d170ef0430d66c8ada523622",
     "/focus/polyfills-es2015.690002c25ea8557bb4b0.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/focus/polyfills-es5.9e286f6d9247438cbb02.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
     "/focus/runtime-es2015.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
