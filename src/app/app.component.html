@@ -2,9 +2,13 @@
 
 <p class="time">{{ remainingSeconds * 1000 | date:'mm:ss' }}</p>
 
-<p>For the next 25 minutes, I will focus on:</p>
-<input [(ngModel)]="currentTask" placeholder="Task" [disabled]="running">
-<button class="round" (click)="start()" [disabled]="running">Start</button>
+<p>
+  For the next 25 minutes,<br>
+  I will focus on:
+</p>
+<input [(ngModel)]="task" placeholder="Task" (keyup)="taskKeyup()">
+<button class="round" (click)="startPause()">{{ running ? 'Pause' : 'Start' }}</button>
+<button class="round" (click)="reset()">Reset</button>
 
 <ng-container *ngIf="completed.length > 0">
   <h2>Completed</h2>
