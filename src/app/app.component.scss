@@ -42,8 +42,16 @@ button {
   padding: 3px 10px;
 }
 
-button:hover {
-  background-color: #b65f76;
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: #b65f76;
+  }
+}
+
+@media (hover: none) {
+  button, input {
+    outline: 0;
+  }
 }
 
 button.round {
