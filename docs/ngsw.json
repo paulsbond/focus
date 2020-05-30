@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1590795664869,
+  "timestamp": 1590796850784,
   "index": "/focus/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/focus/favicon.ico",
         "/focus/index.html",
-        "/focus/main-es2015.92d0155e1813f56503f1.js",
-        "/focus/main-es5.92d0155e1813f56503f1.js",
+        "/focus/main-es2015.6c08405fe2149866faeb.js",
+        "/focus/main-es5.6c08405fe2149866faeb.js",
         "/focus/manifest.webmanifest",
         "/focus/polyfills-es2015.690002c25ea8557bb4b0.js",
         "/focus/polyfills-es5.9e286f6d9247438cbb02.js",
         "/focus/runtime-es2015.1eba213af0b233498d9d.js",
         "/focus/runtime-es5.1eba213af0b233498d9d.js",
-        "/focus/styles.09e2c710755c8867a460.css"
+        "/focus/styles.b29a11e45c1e333169e1.css"
       ],
       "patterns": []
     },
@@ -49,15 +49,15 @@
     "/focus/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/focus/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/focus/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/focus/index.html": "c5ef9c10512b18368ee6035d78a19009fef3cded",
-    "/focus/main-es2015.92d0155e1813f56503f1.js": "6b726ca5ed833c3f6f761b1b35dc531c64318816",
-    "/focus/main-es5.92d0155e1813f56503f1.js": "9a012a54691e5da57585e44d6ee86515df5759eb",
+    "/focus/index.html": "da005ae1426c885c68701fa5f80f2667dca9fd05",
+    "/focus/main-es2015.6c08405fe2149866faeb.js": "193a636ebded6d92d30eeb333c3f615b7e738cb0",
+    "/focus/main-es5.6c08405fe2149866faeb.js": "ad0637ce1ed28826b148c8f637765291499e3938",
     "/focus/manifest.webmanifest": "223dc078fe59f59ad525285fd27725876f86ee32",
     "/focus/polyfills-es2015.690002c25ea8557bb4b0.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/focus/polyfills-es5.9e286f6d9247438cbb02.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
     "/focus/runtime-es2015.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/focus/runtime-es5.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/focus/styles.09e2c710755c8867a460.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "/focus/styles.b29a11e45c1e333169e1.css": "be176bff20ee27bcd6381f5e76ef525fc96b7714"
   },
   "navigationUrls": [
     {
