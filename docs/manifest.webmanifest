@@ -1,12 +1,31 @@
 {
-  "name": "focus",
-  "short_name": "focus",
+  "name": "Focus",
+  "short_name": "Focus",
+  "description": "A timer to track focusing in 25 minute intervals",
   "theme_color": "#b91d47",
   "background_color": "#b91d47",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
   "icons": [
+    {
+      "src": "assets/icons/icon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
     {
       "src": "assets/icons/icon-192x192.png",
       "sizes": "192x192",
