@@ -21,15 +21,16 @@ export class AppComponent implements OnInit {
     this.storage_get("startTime");
     this.storage_get("startSeconds");
     if (this.startTime !== null) {
-      this.remainingSeconds = this.startSeconds - this.secondsSince(this.startTime);
+      this.updateRemainingSeconds();
       this.start();
     } else {
       this.remainingSeconds = this.startSeconds;
     }
   }
 
-  secondsSince(time: number) {
-    return Math.floor((Date.now() - time) / 1000);
+  updateRemainingSeconds() {
+    const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
+    this.remainingSeconds = this.startSeconds - elapsed;
   }
 
   startPause() {
@@ -44,19 +45,17 @@ export class AppComponent implements OnInit {
 
   start() {
     this.running = true;
-    this.interval = setInterval(() => this.tick(), 1000);
-  }
-
-  tick() {
-    this.remainingSeconds--;
-    if (this.remainingSeconds === 0) {
-      this.completed.push({
-        task: this.task,
-        endTime: Date.now()
-      });
-      this.storage_set("completed");
-      this.reset();
-    }
+    this.interval = setInterval(() => {
+      this.updateRemainingSeconds();
+      if (this.remainingSeconds === 0) {
+        this.completed.push({
+          task: this.task,
+          endTime: Date.now()
+        });
+        this.storage_set("completed");
+        this.reset();
+      }
+    }, 1000);
   }
 
   pause() {
