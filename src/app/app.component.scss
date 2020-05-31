@@ -32,9 +32,9 @@ input {
 }
 
 button {
-  background-color: #da7c95;
+  background-color: #666147;
   border-radius: 5px;
-  border: 2px solid #851532;
+  border: 2px solid #494533;
   cursor: pointer;
   font-size: 1rem;
   margin-left: 10px;
@@ -44,7 +44,7 @@ button {
 
 @media (hover: hover) and (pointer: fine) {
   button:hover {
-    background-color: #b65f76;
+    background-color: #555139;
   }
 }
 
@@ -77,14 +77,14 @@ button.action[disabled] {
 
 button.round {
   border-radius: 100%;
-  box-shadow: 0 2px #666;
+  box-shadow: 0 2px #444;
   height: 80px;
   width: 80px;
 }
 
 button.round:active {
-  background-color: #b65f76;
-  box-shadow: 0 1px #555;
+  background-color: #555139;
+  box-shadow: 0 1px #333;
   transform: translateY(1px);
 }
 
