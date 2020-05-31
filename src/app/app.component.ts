@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +7,17 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class AppComponent implements OnInit {
   completed = [];
+  action = "focus";
   task = "";
   running = false;
-  interval;
   startTime: number = null;
   startSeconds = 1500;
   remainingSeconds = this.startSeconds;
+  private interval: NodeJS.Timeout;
 
   ngOnInit() {
     this.storage_get("completed");
+    this.storage_get("action");
     this.storage_get("task");
     this.storage_get("startTime");
     this.storage_get("startSeconds");
@@ -31,6 +32,13 @@ export class AppComponent implements OnInit {
   updateRemainingSeconds() {
     const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
     this.remainingSeconds = this.startSeconds - elapsed;
+  }
+
+  changeAction(action: string) {
+    if (action == this.action) return;
+    this.action = action;
+    this.storage_set("action");
+    this.reset();
   }
 
   startPause() {
@@ -48,11 +56,13 @@ export class AppComponent implements OnInit {
     this.interval = setInterval(() => {
       this.updateRemainingSeconds();
       if (this.remainingSeconds <= 0) {
-        this.completed.push({
-          task: this.task,
-          endTime: Date.now()
-        });
-        this.storage_set("completed");
+        if (this.action === 'focus') {
+          this.completed.push({
+            task: this.task,
+            endTime: this.startTime - this.startSeconds * 1000
+          });
+          this.storage_set("completed");
+        }
         this.reset();
       }
     }, 1000);
@@ -72,10 +82,16 @@ export class AppComponent implements OnInit {
       this.pause();
     }
     this.startTime = null;
-    this.startSeconds = 1500;
-    this.remainingSeconds = this.startSeconds;
     this.storage_del("startTime");
-    this.storage_del("startSeconds");
+    if (this.action === 'focus') {
+      this.startSeconds = 1500;
+    } else if (this.action === 'short') {
+      this.startSeconds = 300;
+    } else if (this.action === 'long') {
+      this.startSeconds = 1800;
+    }
+    this.storage_set("startSeconds");
+    this.remainingSeconds = this.startSeconds;
   }
 
   clear() {

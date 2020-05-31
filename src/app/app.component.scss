@@ -54,6 +54,27 @@ button {
   }
 }
 
+button.action {
+  height: 60px;
+  width: 70px;
+  vertical-align: middle;
+  border: none;
+  background: #af1e45;
+}
+
+button.action.main {
+  width: 100px;
+}
+
+button.action.active {
+  background: #8b1635;
+}
+
+button.action[disabled] {
+  color: #5e0f24;
+  cursor: default;
+}
+
 button.round {
   border-radius: 100%;
   box-shadow: 0 2px #666;
@@ -97,4 +118,8 @@ footer {
   font-size: 0.9rem;
   margin-top: 20px;
   padding: 10px;
+}
+
+input, button, a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
