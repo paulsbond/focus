@@ -59,7 +59,7 @@ export class AppComponent implements OnInit {
         if (this.action === 'focus') {
           this.completed.push({
             task: this.task,
-            endTime: this.startTime - this.startSeconds * 1000
+            endTime: this.startTime + this.startSeconds * 1000
           });
           this.storage_set("completed");
         }
