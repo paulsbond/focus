@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1591009742894,
+  "timestamp": 1591086223417,
   "index": "/focus/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/focus/favicon.ico",
         "/focus/index.html",
-        "/focus/main-es2015.d4b36a377079b0a04e41.js",
-        "/focus/main-es5.d4b36a377079b0a04e41.js",
+        "/focus/main-es2015.b5339dc423c1bb924bf3.js",
+        "/focus/main-es5.b5339dc423c1bb924bf3.js",
         "/focus/manifest.webmanifest",
         "/focus/polyfills-es2015.690002c25ea8557bb4b0.js",
         "/focus/polyfills-es5.9e286f6d9247438cbb02.js",
@@ -32,7 +32,8 @@
         "/focus/assets/icons/icon-32x32.png",
         "/focus/assets/icons/icon-512x512.png",
         "/focus/assets/icons/icon.svg",
-        "/focus/assets/icons/silhouette.svg"
+        "/focus/assets/icons/silhouette.svg",
+        "/focus/assets/sounds/chime.mp3"
       ],
       "patterns": []
     }
@@ -46,10 +47,11 @@
     "/focus/assets/icons/icon-512x512.png": "f7799f5ee4217dde1153af9b46c47dcc5f26d124",
     "/focus/assets/icons/icon.svg": "7e2b89ec86218979831167f3c98ca713a5f33413",
     "/focus/assets/icons/silhouette.svg": "c1b2c9b30957bd41bfd9aa6a55cf85227f6cadac",
+    "/focus/assets/sounds/chime.mp3": "4f28c2856693f2777efd63ed85df27adb232abc1",
     "/focus/favicon.ico": "31b5dd2bca2d2de2825d720e17a10d32b2e974c6",
-    "/focus/index.html": "c8674e3297b9239dc56cb3607a530195a1046c63",
-    "/focus/main-es2015.d4b36a377079b0a04e41.js": "d8ec2807605e355fcdd3bc343b383a88952ecd97",
-    "/focus/main-es5.d4b36a377079b0a04e41.js": "ff7e4f412be29d70f7f9836cc067e98d2f1144dd",
+    "/focus/index.html": "262060aed2f2672e2e91c34abf1fa7896c1104ac",
+    "/focus/main-es2015.b5339dc423c1bb924bf3.js": "1294c0a822e65cc294f145203921eabe97ae7fef",
+    "/focus/main-es5.b5339dc423c1bb924bf3.js": "d378c364a893b0a2734a271cd5bf56817d8c3c4a",
     "/focus/manifest.webmanifest": "3c632589bd82778d1856b697af16204863017be4",
     "/focus/polyfills-es2015.690002c25ea8557bb4b0.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/focus/polyfills-es5.9e286f6d9247438cbb02.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",

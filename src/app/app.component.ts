@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Howl } from "howler";
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
   startSeconds = 1500;
   remainingSeconds = this.startSeconds;
   private interval: NodeJS.Timeout;
+  private chime = new Howl({ src: ["assets/sounds/chime.mp3"], volume: 0.5 });
 
   ngOnInit() {
     this.storage_get("completed");
@@ -56,6 +58,9 @@ export class AppComponent implements OnInit {
     this.interval = setInterval(() => {
       this.updateRemainingSeconds();
       if (this.remainingSeconds <= 0) {
+        if (this.remainingSeconds >= -1) {
+          this.chime.play();
+        }
         if (this.action === 'focus') {
           this.completed.push({
             task: this.task,
