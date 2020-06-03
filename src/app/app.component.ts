@@ -18,11 +18,11 @@ export class AppComponent implements OnInit {
   private chime = new Howl({ src: ["assets/sounds/chime.mp3"], volume: 0.5 });
 
   ngOnInit() {
-    this.storage_get("completed");
-    this.storage_get("action");
-    this.storage_get("task");
-    this.storage_get("startTime");
-    this.storage_get("startSeconds");
+    this.storageGet("completed");
+    this.storageGet("action");
+    this.storageGet("task");
+    this.storageGet("startTime");
+    this.storageGet("startSeconds");
     if (this.startTime !== null) {
       this.updateRemainingSeconds();
       this.start();
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
   changeAction(action: string) {
     if (action == this.action) return;
     this.action = action;
-    this.storage_set("action");
+    this.storageSet("action");
     this.reset();
   }
 
@@ -48,7 +48,8 @@ export class AppComponent implements OnInit {
       this.pause();
     } else {
       this.startTime = Date.now();
-      this.storage_set("startTime");
+      this.storageSet("startTime");
+      this.requestNotificationPermission();
       this.start();
     }
   }
@@ -60,13 +61,14 @@ export class AppComponent implements OnInit {
       if (this.remainingSeconds <= 0) {
         if (this.remainingSeconds >= -1) {
           this.chime.play();
+          this.showNotification();
         }
         if (this.action === 'focus') {
           this.completed.push({
             task: this.task,
             endTime: this.startTime + this.startSeconds * 1000
           });
-          this.storage_set("completed");
+          this.storageSet("completed");
         }
         this.reset();
       }
@@ -77,9 +79,9 @@ export class AppComponent implements OnInit {
     clearInterval(this.interval);
     this.running = false;
     this.startTime = null;
-    this.storage_del("startTime");
+    this.storageDel("startTime");
     this.startSeconds = this.remainingSeconds;
-    this.storage_set("startSeconds");
+    this.storageSet("startSeconds");
   }
 
   reset() {
@@ -87,7 +89,7 @@ export class AppComponent implements OnInit {
       this.pause();
     }
     this.startTime = null;
-    this.storage_del("startTime");
+    this.storageDel("startTime");
     if (this.action === 'focus') {
       this.startSeconds = 1500;
     } else if (this.action === 'short') {
@@ -95,25 +97,25 @@ export class AppComponent implements OnInit {
     } else if (this.action === 'long') {
       this.startSeconds = 1800;
     }
-    this.storage_set("startSeconds");
+    this.storageSet("startSeconds");
     this.remainingSeconds = this.startSeconds;
   }
 
   clear() {
     this.completed = [];
-    this.storage_del("completed");
+    this.storageDel("completed");
   }
 
   taskKeyup() {
-    this.storage_set("task");
+    this.storageSet("task");
   }
 
-  storage_set(key: string): void {
+  storageSet(key: string): void {
     const storageKey = "focus." + key;
     localStorage.setItem(storageKey, JSON.stringify(this[key]));
   }
 
-  storage_get(key: string): void {
+  storageGet(key: string): void {
     const storageKey = "focus." + key;
     const value = localStorage.getItem(storageKey);
     if (value !== null) {
@@ -121,8 +123,28 @@ export class AppComponent implements OnInit {
     }
   }
 
-  storage_del(key: string): void {
+  storageDel(key: string): void {
     const storageKey = "focus." + key;
     localStorage.removeItem(storageKey);
+  }
+
+  requestNotificationPermission() {
+    if ("Notification" in window && navigator.serviceWorker) {
+      Notification.requestPermission();
+    }
+  }
+
+  showNotification() {
+    if ("Notification" in window && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistration().then(registration => {
+        const title = this.action === "focus" ?
+          "Focus session complete!" : "Time to focus.";
+        const options = {
+          icon: "assets/icons/icon.svg",
+          vibrate: [100, 50, 100],
+        };
+        registration.showNotification(title, options);
+      });
+    }
   }
 }
